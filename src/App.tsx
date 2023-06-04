@@ -1,7 +1,13 @@
 import { Header } from './components/Header'
+import { TopStories } from './components/TopStories'
 
 function App() {
-  return <Header />
+  return (
+    <>
+      <Header />
+      <TopStories />
+    </>
+  )
 }
 
 export default App
