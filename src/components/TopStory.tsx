@@ -26,7 +26,7 @@ export function TopStory({ id }: { id: number }) {
       </a>
       <div className="flex items-center justify-between gap-2">
         <small>{story.score} points</small>
-        <Link className="text-sm hover:underline" to="/">
+        <Link className="text-sm hover:underline" to={`/story/${story.id}`}>
           {story.descendants} comments
         </Link>
         <small>by {story.by}</small>

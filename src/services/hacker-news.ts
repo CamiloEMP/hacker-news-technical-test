@@ -11,8 +11,8 @@ export async function getTopStories({ page, limit }: { page: number; limit: numb
   return ids.slice(startIndex, endIndex)
 }
 
-export async function getItemInfo(id: number) {
+export async function getItemInfo<T>(id: number) {
   const res = await fetch(STORY_URL(id))
 
-  return await res.json()
+  return (await res.json()) as T
 }
